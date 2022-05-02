@@ -6,19 +6,47 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://oldsilly.github.io">
-  <title>文章分类 | Oldsilly&#39;s secrets</title>
+  <title>通信原理实验笔记 | Oldsilly&#39;s secrets</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="https://oldsilly.github.io/categories/index.html">
+  <meta name="description" content="这个学期在弄通信原理实验，感觉基础太薄弱，很多原理都不甚了解，导致很多现象根本分析不明白，太痛苦了！所以打算记录一下所学到的东西，供以后的自己复习也便于大家探讨。 感谢这个清明假期，让我能够停下脚步整理一下所学的知识！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通信原理实验笔记">
+<meta property="og:url" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Oldsilly&#39;s secrets">
+<meta property="og:description" content="这个学期在弄通信原理实验，感觉基础太薄弱，很多原理都不甚了解，导致很多现象根本分析不明白，太痛苦了！所以打算记录一下所学到的东西，供以后的自己复习也便于大家探讨。 感谢这个清明假期，让我能够停下脚步整理一下所学的知识！">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-05T04:36:49.000Z">
-<meta property="article:modified_time" content="2022-05-02T05:04:35.124Z">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig1.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig2.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig3.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig4.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig5.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig6.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig7.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig8.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig9.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig10.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig11.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig12.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig13.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig14.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig15.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig16.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig17.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig18.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig19.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig20.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig21.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig22.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig23.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig24.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig25.png">
+<meta property="article:published_time" content="2022-05-02T05:10:48.000Z">
+<meta property="article:modified_time" content="2022-05-02T05:49:53.914Z">
 <meta property="article:author" content="Oldsilly">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig1.png">
   
     <link rel="alternative" href="/atom.xml" title="Oldsilly&#39;s secrets" type="application/atom+xml">
   
@@ -166,20 +194,506 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article class="article article-type-post show">
-  <header class="article-header" style="border-bottom: 1px solid #ccc">
-  <h1 class="article-title" itemprop="name">
-    文章分类
-  </h1>
-  </header>
+            <article id="post-通信__通信原理实验笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      通信原理实验笔记
+    </h1>
+  
+
 
   
-  <div class="category-all-page">
-    <h2>共计&nbsp;3&nbsp;个分类</h2>
-    <ul class="category-list-item-list"><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E7%AB%A5%E7%8C%AA%E7%9A%84%E6%97%A5%E5%B8%B8/">童猪的日常</a><span class="category-list-item-list-count">2</span></li><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E9%80%9A%E4%BF%A1/">通信</a><span class="category-list-item-list-count">1</span></li><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-item-list-count">1</span></li></ul>
-  </div>
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2022-05-02T05:10:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-02</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">5.8k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">20分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>这个学期在弄通信原理实验，感觉基础太薄弱，很多原理都不甚了解，导致很多现象根本分析不明白，太痛苦了！所以打算记录一下所学到的东西，供以后的自己复习也便于大家探讨。<br>
+感谢这个清明假期，让我能够停下脚步整理一下所学的知识！</p>
+<span id="more"></span>
+<h2 id="成形滤波和匹配滤波">成形滤波和匹配滤波</h2>
+<h3 id="本节参考文献">本节参考文献</h3>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46136963/article/details/107981923">为什么需要成形滤波</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44586473/article/details/104372110">深入理解奈奎斯特第一准则与码间串扰</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/flypassion/article/details/103610482">为什么要进行升采样？</a></p>
+<h3 id="知识点讲解">知识点讲解</h3>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig1.png">
+</div>
+<p><strong>成形滤波到底做了什么？</strong><br>
+（1）频谱压缩，限制信号带宽。在数字通信中基带信号是矩形脉冲，突变的上升沿和下降沿包含高频分量丰富，其频谱范围普遍比较宽（频谱是一个Sa函数)。为了有效利用信道，在信号传输之前，需要对信号进行频谱压缩。使其在消除码间串扰和达到最佳检测的前提下，大大提高频带利用率。信号带宽匹配信道带宽。</p>
+<p>（2）改变传输信号的成形波形，可以减小抽样定时脉冲误差所带来的影响，即降低了码间干扰（ISI）。输入符号为调制（编码）后的码元，以BPSK为例，编码后就是1和-1的序列。如果每个码元频域上乘一个低通滤波器，相当于时域上卷积一个Sa函数，而且总波形在恰当的采样点刚好能正确获取码元的值。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig2.png">
+</div>
+<p>然而理想的矩形低通滤波器是无法实现的，那是不是我们的方案就不可行了呢？NO！通信原理告诉我们可以采用升余弦滚降滤波器，同样可以满足在特定的固定周期的点上过零。而且从图上可以看到，余弦滚降滤波器的拖尾比理想滤波器好很多，这就意味着定时误差可以没那么严格。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig3.png">
+</div>
+<p>成形滤波就是让码元过一个余弦滚降滤波器，输出信号为类似上上图的绿线，仿真图如下。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig4.png">
+</div>
+<p>你确定直接这样做就好了吗？</p>
+<p>有得必有失，余弦滚降滤波器的缺点就是使得带宽变大了。系统传输带宽就超过了奈奎斯特最小带宽，这时码元速率就小于2 倍带宽。这意味着如果解调器在每个码元间隔内仅做一次采样，那么会因为采样点太少而不能可靠恢复模拟波形，产生失真。一种解决办法是做升采样，在代码中即为在码元间补零。</p>
+<p><strong>匹配滤波又做了什么？</strong><br>
+通信原理说道，在抽样时刻上输出信噪比最大的滤波器称为匹配滤波器。在软件中根据成形滤波器可以容易地得到匹配滤波器参数。</p>
+<p>当接收机直接对接收波形进行抽样判决时，没有利用到其余非抽样时刻的信息，性能不一定最优。而波形经过匹配滤波后，不一定降低整体的噪声功率，但是改善了判决时刻信噪比，从而降低误码率（当噪声之间存在相关性时，匹配滤波不能明显改善判决时刻信噪比）。</p>
+<p><strong>关于星座图</strong><br>
+本部分来自学长的部份仿真图和原理解释，且还未获得同意QAQ。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig5.png">
+</div>
+<p>由于过采样，成型滤波器的输出的星座图可以有各种多个Sa函数组合的结果，也即其取值可以为最大值到最小值之间的任一幅值。</p>
+<p>而匹配滤波端由于经过降采样处理，采样的值只会是符号处的值，理论上所有点会聚集在符号集处，对于BPSK即两个点。星座图上在原点也有部分点聚集是因为信号在发送端进入信道前，发送机在有效信号前后增加了一些零点，以避免在发送开始、结束时出现问题导致部分有用信号丢失，确保信号能被接收端完全接收。</p>
+<p>如果想去除发送机自动添加的零点，该怎么办呢？<br>
+答：只要找到有效数据开始的时刻即可，即做<strong>帧同步</strong>。</p>
+<h2 id="码元定时恢复（码元同步）">码元定时恢复（码元同步）</h2>
+<p>由前面的论述可知，要想采样得到正确的结果，抛开码间串扰不谈，我们最起码要在对的位置采样，不然就算接收到的码元无差错，你也不知道这则信息的起点和终点。而考虑码间串扰，就不仅要找对位置，还要找准位置。</p>
+<h3 id="本章参考资料">本章参考资料</h3>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/345445660">位同步——Gardner环路</a></p>
+<h3 id="知识点讲解-2">知识点讲解</h3>
+<p>首先思考一下，什么时候采样是最佳采样时刻？用什么依据来找该时刻？一种常见且实用的方法就是，在最佳采样时刻，所有采样点获得的码元能量是最高的。</p>
+<h4 id="最大能量法">最大能量法</h4>
+<p><strong>核心思想：寻找使得采样得到的信号的平均能量最大的点作为最佳采样点。</strong></p>
+<p><strong>优点：简单、好理解</strong></p>
+<p>具体实现：假设降采样系数为M=16，求和码元数为N=10，则该算法首先取出前MN=160个数据进行最佳采样点的寻找。第1次循环，160个数据以M=16进行降采样，得到10个点，计算该10个点的能量，并存入数组A；第2次循环，原160个数据左移一个，剩下159个数据，以M=16进行降采样，得到10个点，计算该10个点的能量，并存入数组A······第16次循环，剩下145个数据，以M=16进行降采样，得到10个点，计算该10个点的能量，并存入数组A。此时如果再左移一次，降采样后的数据就没有10个点了，而且16个次已经完整遍历了一个码元了，所以在这16次遍历中一定有一个最佳采样点，即数组A中元素最大值，其索引X为最大采样点所在位置。最后将数据整体左移X个单位，就完成了码元同步。</p>
+<p><strong>缺点：基于多个码元的统计平均算出最佳采样点，性能较好，但是由于要多个码元统计平均，所以需要把多个码元接下来后再进行操作，时延较大。</strong></p>
+<h4 id="迟早门法">迟早门法</h4>
+<p><strong>核心思想：选择一个参考码元，将参考码元的一个周期分为前半周期和后半周期，通过比较前半个周期与后半个周期的能量大小，来调整同步定时误差。</strong></p>
+<p><strong>优点：无需插入导频和时间序列，且当同步时稳定，不会驱动自己离开同步。不同于最大能量法，迟早门法无需缓存一段码元信息来确定采样时刻，可以根据接收的码元进行同步的调整。</strong></p>
+<p>具体实现：假设降采样系数为M=16，即一个码元周期被分成了16份，首先随意初始化迟门位置，比如说5（关于初始化，可以取第3个码元的第1个采样值大于0.5的时刻，这样初始化的迟门更会更快的达到最佳采样时刻）。然后比较左右两边的能量（专业点讲，左边部份叫早门，右边部分叫迟门），比如，早门取了-3、-2、-1、0、1、2、3、4时刻的能量（负数表明是第2个码元中的采样点）；迟门取了6、7、8、9、10、11、12、13时刻的能量。如果早门能量多，则迟门位置左移1个采样点，否则右移1个采样点。找到最佳采样点的标志是，当前得到的迟门位置是迟门的历史位置（可以理解为迟门位置在最佳采样点处开始震荡）。</p>
+<h4 id="Gardner法">Gardner法</h4>
+<p>前述的两种方法中，计算复杂，也取不到最完美的采样点。而Gardner定时误差算法，的一个特点是每个符号只需要使用两个采样点，一个是strobe点，即最佳观察点，另外一个是midstrobe点，即两个观察点之间的采样点。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig6.png">
+</div>
+<p>依笔者看就类似二分法，可以自动找到更精准的采样点。</p>
+<h4 id="星座图分析">星座图分析</h4>
+<p>未降采样的星座图：</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig7.png">
+</div>
+<p>降采样但未码元同步的星座图</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig8.png">
+</div>
+<p>最大能量法码元同步后星座图：</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig9.png">
+</div>
+<p>迟早门法码元同步后星座图：</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig10.png">
+</div>
+<h4 id="结论">结论</h4>
+<p>可以看出经过码元同步后的星座图在对应符号处更加密集，这说明最大能量法和迟早门法定时同步改善了抽样时刻的选取，使抽样时刻的信噪比得到提高，减小误码现象。</p>
+<p>对比两种定时同步方法，可以发现最大能量法的同步效果要优于迟早门法。这是因为最大能量法遍历了所有码元的每一时刻，综合选取最佳的抽样时刻，最终确定的时延值基本是稳定的。而迟早门法只是对码元前后半周期的能量求和，没有精确到各个抽样时刻，最终逐次比较得到的是一个计算出来的值。由于各个码元波形可能有不同程度的变化，各个周期的信号不一定完全相同，这种方法得到的会与最佳判决有一定偏差。另外，迟早门法无法辨别参考码元正好处于两个码元之间的情况，会使某些计算值错误。总体而言，这两种方法都可以减小信号时延，使抽样判决过程信噪比提高，减少误码的发生。而本实验中最大能量法要略优于迟早门法。</p>
+<p>从不同降采样系数对应不同的星座图可以看出，在降采样系数降到8的时候明显码元同步就失败了，这是因为当降采样系数太低时从USRP上收下来的数据本来就已经不包含最佳采样点位置了，因此利用这两种方法都没有办法取得最佳采样点的数据，只有利用Gardner法的插值能够算出较接近最佳采样点的数据。</p>
+<p><strong>重点：未经降采样时（即未经过码元同步）的星座图，每个点的位置是有4个点的</strong></p>
+<h4 id="思考题">思考题</h4>
+<h5 id="分析最大能量法，迟早门法和Gardener算法的优缺点。">分析最大能量法，迟早门法和Gardener算法的优缺点。</h5>
+<p><strong>最大能量法</strong>：基于多个码元的统计平均算出最佳采样点，性能较好，但是由于要多个码元统计平均，所以需要把多个码元接下来后再进行操作，时延较大。</p>
+<p><strong>迟早门法</strong>：针对一个参考码元做定位，在实际的操作中需要在数据序列前加用于定位的码元，在针对单个码元的时候能够检测出最佳采样点，性能相对最大能量法要稍差，但是由于只用当前码元，所以不需要把多个数据都接下来之后再处理，实时性比较强。</p>
+<p><strong>Gardner法</strong>：只需要3个采样点进行插值计算，因此对接收端的采样率要求降低了很多，通过插值计算与反馈实时调整采样脉冲的相位从而找到最佳采样点，但是实现难度大，算法较复杂。</p>
+<h5 id="思考为什么接收机在接收过程中先过采样再降采样。">思考为什么接收机在接收过程中先过采样再降采样。</h5>
+<p>为了匹配滤波与码元同步。接收机在一个码元周期内进行多次采样即过采样能够恢复基带波形，对此基带波形再进行匹配滤波能改善抽样时刻的信噪比，再对一个码元内的多个数据进行码元同步，选出其中能量最大的地方作为最佳采样点，因此过采样因子越大，采到的数据越多，就越能够找到最佳采样点，因此这就是为什么过采样因子太小了码元同步不能工作的原因。</p>
+<h2 id="帧同步和频偏纠正">帧同步和频偏纠正</h2>
+<h3 id="本章参考资料-2">本章参考资料</h3>
+<p>无</p>
+<h3 id="为什么要做帧同步和频偏纠正">为什么要做帧同步和频偏纠正</h3>
+<p>码元定时后仍可能存在码元周期整数个的时延，因此还需要帧同步。</p>
+<p>接收机相干载波的频率和相位与发送机存在偏差，因此还需要频偏与相偏纠正。</p>
+<h3 id="帧同步">帧同步</h3>
+<h4 id="一帧数据的构成"><strong>一帧数据的构成</strong></h4>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig11.png">
+</div>
+<p><strong>保护位：降低前后帧之间的影响，并提高同步质量。</strong></p>
+<p>保护位越长，前后帧之间影响越小，通信可靠性越高而通信有效性会降低。</p>
+<p><strong>同步位：本次实验使用巴克码（长度可以自己扩展），目标是序列自相关特性要好</strong>。</p>
+<p>帧同步码要求自相关特性曲线具有尖锐单峰，以便容易地从接收码元序列中识别出来。巴克码旁瓣的绝对值不大于1，而峰值为巴克码码长。因此巴克码越长，峰值越高，识别更不易出错。</p>
+<p><strong>信息位：发送信息所处的比特位</strong>。</p>
+<h4 id="码元同步和帧同步的区别（粗略理解）">码元同步和帧同步的区别（粗略理解）</h4>
+<p>码元同步是让你听清楚每个字，也就是你能听写写下每个字。</p>
+<p>而帧同步是确保你一句话是听完整的，也就是你知道接收到的一句话哪里是句号。</p>
+<h3 id="频偏估计和相偏估计">频偏估计和相偏估计</h3>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig12.png">
+</div>
+<h4 id="频偏纠正">频偏纠正</h4>
+<p>关于频偏对数据的影响：数据 <strong>s</strong> 经过频偏和信道 <strong>h</strong> 的影响为：<br>
+$$<br>
+y[n]=e^{j2\pi f_0 nT} \sum_{l=0}^Lh[l]s[n-l]+v[n]<br>
+$$<br>
+其中可记<br>
+$$<br>
+\epsilon=f_0T<br>
+$$<br>
+频偏检测时，在数据前重复的训练序列具有周期性，在训练序列长度内有：<br>
+$$<br>
+y[n+N_t]=e^{j2\pi f_0 nT} \sum_{l=0}^Lh[l]s[n+N_t-l]+v[n+N_t] \<br>
+s[n+N_t]=s[n]=t[n]<br>
+$$<br>
+其中t[n]是训练序列，L是信道阶数（平衰落时为0）</p>
+<p>从而有：<br>
+$$<br>
+y[n+N_t]=e^{j2\pi \epsilon n}e^{j2\pi \epsilon N_t} \sum_{l=0}^Lh[l]t[n-l]+v[n+N_t]\approx e^{j2\pi \epsilon N_t}y[n]<br>
+$$<br>
+<strong>为什么可以约等于</strong>：由于频偏是由于精度问题引起的，故不会很大，所以ε很小，在有限长度训练序列范围内，nε也很小，因此相当于0相位。而由于采样频率高，  v[n]和v[n+Nt]  可以视作一个相干时间内的噪声，近似相等。</p>
+<p>从而求取ε可以转化为计算最小均方差的问题。对于估计值α，应该满足如下式子最小：<br>
+$$<br>
+J(\alpha)=\sum_{l=L}^{N_t -1}||y[l+N_t]-\alpha y[l]||^2<br>
+$$<br>
+解得（不会解的直接套公式算出也可）：<br>
+$$<br>
+\hat{\alpha} =\frac {\sum_{l=L}^{N_t -1}y[l+N_t]y^*[l]}{\sum_{l=L}^{N_t -1}|y[l]|^2}<br>
+$$<br>
+则所估计的ε即为α的相位，相位与上式的分母无关，可以化简程序。</p>
+<p>由上述分析可知，Nt的增大会使得平均次数变多，噪声影响会减小，使得计算结果更为精确。</p>
+<p>关于频偏检测范围：频偏检测f0范围应为(-pi,pi)，因此ε的范围应为<br>
+$$<br>
+|\epsilon| \le \frac{1}{2N_t}<br>
+$$<br>
+于是得出结论：训练序列越长意味着频偏范围要更小。</p>
+<h4 id="相偏纠正">相偏纠正</h4>
+<p>经过频偏纠正后，输出信号和发送信号只差一个不随时间变化的相位差。<br>
+$$<br>
+e^{j\beta}y[n]=e^{j\theta}s[n]<br>
+r[n]=s^*[n]\times y[n]=Ae^{j(\beta-\theta)}=Ae^{j\tau}<br>
+$$<br>
+其中 τ 即为相位差（弧度制），当多个码元计算求和后，得到的 τ 会更加准确。</p>
+<h3 id="仿真结果分析">仿真结果分析</h3>
+<h4 id="帧同步与频偏相偏校正之后的眼图和星座图分析">帧同步与频偏相偏校正之后的眼图和星座图分析</h4>
+<p>1、无频偏</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig13.png">
+</div>
+<p><strong>帧同步成功的现象</strong>：由于发射机在发送数据前会添加0点以保护数据，所以不做帧同步时在原点处会有数据，帧同步如果成功，则在原点处看不到数据。</p>
+<p>2、频偏为0.0002</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig14.png">
+</div>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig15.png">
+</div>
+<p>频偏相当于信号乘了一个旋转因子，因此未作频偏纠正前，星座图是一个圆。</p>
+<p>当频偏超过一定范围后，频偏纠正模块无法纠正，星座图仍是一个圆。<strong>且帧同步也无法正确运行</strong>。</p>
+<h4 id="频偏的存在，将影响基于相关的帧检测的性能，试分析">频偏的存在，将影响基于相关的帧检测的性能，试分析</h4>
+<p>频偏的存在将导致巴克码码元出现旋转，从而造成自相关函数峰值的降低，以及非峰值处的增高。上一部分的频偏0.01的情况中，帧同步没有完成正确的功能，在原点处仍存在数据点。而其他两个情况帧同步都很好的完成了功能。</p>
+<h2 id="均衡">均衡</h2>
+<h3 id="本章参考资料-3">本章参考资料</h3>
+<p>无</p>
+<h3 id="均衡介绍">均衡介绍</h3>
+<p>**为什么需要均衡：**信道均衡是衰落信道中的通信系统的传输性能而采取的一种抗衰落措施。它主要是为了消除或者是减弱宽带通信时的多径时延带来的码间串扰（ISI）问题。</p>
+<h4 id="均衡的方法">均衡的方法</h4>
+<p>1、<strong>两种方法</strong></p>
+<p><strong>间接法</strong></p>
+<p>① 先使用线性最小二乘估计法（LLSE），通过接收到的训练序列对信道进行估计                                。</p>
+<p>② 先使用线性最小二乘估计法（LLSE），通过接收到的训练序列对均衡器抽头系数进行估计  。</p>
+<p>其中均衡器和信道为互逆系统，即满足：<br>
+$$<br>
+\sum_{l=0}^{L_f} \hat{g}<em>{k-i}f_i=\delta</em>{k-k_d}<br>
+$$<br>
+<strong>直接法</strong></p>
+<p>使用线性最小二乘估计法（LLSE），通过经过信道后的训练序列<strong>直接</strong>对均衡器抽头系数进行估计  。</p>
+<p><strong>两种方法的区别、优势和适用范围</strong></p>
+<p>区别：直接法的测试序列长度决定了均衡器的长度，而间接法没这一限制。</p>
+<p>​     直接法优势：一定程度上提高了对噪声的鲁棒性，避免了两步推算引起的计算误差扩散。</p>
+<p>​     间接法优势：可以得到对信道的估计，而这一估计结果有广泛的应用。</p>
+<p>​     适用范围：如果测试序列较短，间接法性能更好，因为  可以选取较大的值；而当  较大时，直接法更有效率。</p>
+<h3 id="均衡仿真结果">均衡仿真结果</h3>
+<p>二径+无噪声</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig16.png">
+</div>
+<p>二径+高斯噪声</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig17.png">
+</div>
+<p>二径+衰落信道</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig18.png">
+</div>
+<p>多径效应会导致接收信号存在码间串扰，此时需要通过均衡来对信道估计，从而逆恢复为正确的码元。</p>
+<h2 id="无线通信基础">无线通信基础</h2>
+<h3 id="本章参考资料-4">本章参考资料</h3>
+<p><a target="_blank" rel="noopener" href="https://www.txrjy.com/thread-394879-1-1.html">《深入浅出通信原理》</a></p>
+<h3 id="移动衰落信道">移动衰落信道</h3>
+<h4 id="路径损耗">路径损耗</h4>
+<p>无线电波在自由空间传播时产生的损耗被称为路径损耗。路径损耗反映了在大范围空间距离上接收信号电平的平均值变化趋势。</p>
+<h4 id="大尺度衰落">大尺度衰落</h4>
+<p>无线电波在传播路径上受到建筑物及山丘等遮挡所产生的损耗被称为阴影衰落。阴影衰落反映了在几百倍波长量级的中等范围内接收信号电平的平均值变化趋势，因此也被称为大尺度衰落。</p>
+<h4 id="小尺度衰落">小尺度衰落</h4>
+<p>主要由于多径传播而产生的损耗被称为多径衰落。多径衰落反映了在几十倍波长量级的小范围内接收信号电平的平均值变化趋势，因此也被称为小尺度衰落。</p>
+<h5 id="多径效应">多径效应</h5>
+<p>考虑两路信号（简单多径）</p>
+<p>直射信号：<br>
+$$<br>
+s_1=A_1cos(2\pi ft)<br>
+$$<br>
+反射信号，其中tau是延迟时间：<br>
+$$<br>
+s_2=A_2cos[2\pi f(t-\tau)+\pi]<br>
+$$<br>
+合成信号：<br>
+$$<br>
+s_1+s_2=A_1cos(2\pi ft)+A_2cos[2\pi f(t-\tau)+\pi]<br>
+$$<br>
+合成信号幅度为：<br>
+$$<br>
+A=\sqrt{[A_2sin(2\pi f\tau)]^2+[A_1-A_2cos(2\pi f\tau)]^2}=\sqrt{[A_1^2+A_2^2-2A_1A_2cos(2\pi f\tau)]}<br>
+$$<br>
+我们可以知道，合成信号幅度和延迟时间tau有关系，合成信号幅度随信号频率的变化曲线如下（固定时延tau）：</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig19.png">
+</div>
+<p>波峰波峰、波谷波谷之间的频率间隔恰好为时延tau的倒数。当tau取多径信道的最大时延时，该间隔记为<br>
+$$<br>
+B_c=\frac{1}{\tau_m}<br>
+$$</p>
+<h5 id="平坦衰落">平坦衰落</h5>
+<p>为了避免信号严重失真，要求信号带宽B小于信道相干带宽Bc。<strong>这样信号中不同频率成分经多径传输后到达接收机时的幅度增益差别不大</strong>（至少是在一个周期内的变化，变化幅度没那么离谱）。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig20.png">
+</div>
+<h5 id="频率选择性衰落">频率选择性衰落</h5>
+<p>如果信号带宽B大于信道相干带宽Bc，则信号中不同频率成分经多径传输后到达接收机时的幅度增益差别很大。有好几个频率成分被放大，又会有好几个频率成分被缩小，即为频率选择性衰落。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig21.png">
+</div>
+<h5 id="多普勒效应">多普勒效应</h5>
+<p>当发送机速度固定，此时朝着接收机的方向有最大频率f=(c+v)/λ ，多普勒频移为fd=v/λ。同理，背离接收机方向有最小频率f=(c-v)/λ ，多普勒频移为fd=-v/λ。</p>
+<p>因此，总的频率范围为：[f-fd,f+fd]。这就是<strong>多普勒频移</strong>。</p>
+<p>在<strong>多径传播</strong>的场景下，频率为f的信号经不同传播路径到达接收机，不同传播路径的多普勒频移不同，导致接收信号频率扩展到</p>
+<p>[f -fd,f+fd ]这就是多普勒扩展。即，在多径传播背景下，不同频率分量有衰落，因此接收信号频谱也是各频率成分有衰落的</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig22.png">
+</div>
+<p>接收机合成信号如下：</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig23.png">
+</div>
+<h5 id="相干时间">相干时间</h5>
+<p>一般将最大多普勒频移fd的倒数1/fd 定义为多径信道的相干时间，即:<br>
+$$<br>
+T_c=\frac{1}{f_d}<br>
+$$</p>
+<h5 id="快衰落">快衰落</h5>
+<p>如果符号持续时长远大于信道的相干时间，即 T&gt;&gt;Tc。符号持续期间的信号幅度波动很大，这种衰落被称为快衰落。即，符号周期过程中多个特定时间位置的波形放大，多个特定时间位置的缩小。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig24.png">
+</div>
+<h5 id="慢衰落">慢衰落</h5>
+<p>为了避免符号持续期间信号幅度的大幅波动，一般要求符号持续时长小于信道的相干时间，即 T&lt;Tc。这样可以保证符号持续期间的信号幅度变化不大，这种衰落被称为慢衰落。</p>
+<div align="center">
+    <img src="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/fig25.png">
+</div>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Oldsilly
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://oldsilly.github.io/2022/05/02/通信__通信原理实验笔记/" title="通信原理实验笔记" target="_blank">https://oldsilly.github.io/2022/05/02/通信__通信原理实验笔记/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/通信//" class="article-tag-list-link color3">通信</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://oldsilly.github.io/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
 </article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2022/05/02/220502-essay/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          心声的新生
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/05/02/test2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">童猪怕黑</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E5%BD%A2%E6%BB%A4%E6%B3%A2%E5%92%8C%E5%8C%B9%E9%85%8D%E6%BB%A4%E6%B3%A2"><span class="toc-number">1.</span> <span class="toc-text">成形滤波和匹配滤波</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E8%8A%82%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">1.1.</span> <span class="toc-text">本节参考文献</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B2%E8%A7%A3"><span class="toc-number">1.2.</span> <span class="toc-text">知识点讲解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%81%E5%85%83%E5%AE%9A%E6%97%B6%E6%81%A2%E5%A4%8D%EF%BC%88%E7%A0%81%E5%85%83%E5%90%8C%E6%AD%A5%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">码元定时恢复（码元同步）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AB%A0%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">2.1.</span> <span class="toc-text">本章参考资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B2%E8%A7%A3-2"><span class="toc-number">2.2.</span> <span class="toc-text">知识点讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E8%83%BD%E9%87%8F%E6%B3%95"><span class="toc-number">2.2.1.</span> <span class="toc-text">最大能量法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9F%E6%97%A9%E9%97%A8%E6%B3%95"><span class="toc-number">2.2.2.</span> <span class="toc-text">迟早门法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Gardner%E6%B3%95"><span class="toc-number">2.2.3.</span> <span class="toc-text">Gardner法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%9F%E5%BA%A7%E5%9B%BE%E5%88%86%E6%9E%90"><span class="toc-number">2.2.4.</span> <span class="toc-text">星座图分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">2.2.5.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="toc-number">2.2.6.</span> <span class="toc-text">思考题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E6%9C%80%E5%A4%A7%E8%83%BD%E9%87%8F%E6%B3%95%EF%BC%8C%E8%BF%9F%E6%97%A9%E9%97%A8%E6%B3%95%E5%92%8CGardener%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E3%80%82"><span class="toc-number">2.2.6.1.</span> <span class="toc-text">分析最大能量法，迟早门法和Gardener算法的优缺点。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A5%E6%94%B6%E6%9C%BA%E5%9C%A8%E6%8E%A5%E6%94%B6%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%85%88%E8%BF%87%E9%87%87%E6%A0%B7%E5%86%8D%E9%99%8D%E9%87%87%E6%A0%B7%E3%80%82"><span class="toc-number">2.2.6.2.</span> <span class="toc-text">思考为什么接收机在接收过程中先过采样再降采样。</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A7%E5%90%8C%E6%AD%A5%E5%92%8C%E9%A2%91%E5%81%8F%E7%BA%A0%E6%AD%A3"><span class="toc-number">3.</span> <span class="toc-text">帧同步和频偏纠正</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AB%A0%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99-2"><span class="toc-number">3.1.</span> <span class="toc-text">本章参考资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%81%9A%E5%B8%A7%E5%90%8C%E6%AD%A5%E5%92%8C%E9%A2%91%E5%81%8F%E7%BA%A0%E6%AD%A3"><span class="toc-number">3.2.</span> <span class="toc-text">为什么要做帧同步和频偏纠正</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A7%E5%90%8C%E6%AD%A5"><span class="toc-number">3.3.</span> <span class="toc-text">帧同步</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E5%B8%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9E%84%E6%88%90"><span class="toc-number">3.3.1.</span> <span class="toc-text">一帧数据的构成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A0%81%E5%85%83%E5%90%8C%E6%AD%A5%E5%92%8C%E5%B8%A7%E5%90%8C%E6%AD%A5%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88%E7%B2%97%E7%95%A5%E7%90%86%E8%A7%A3%EF%BC%89"><span class="toc-number">3.3.2.</span> <span class="toc-text">码元同步和帧同步的区别（粗略理解）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E5%81%8F%E4%BC%B0%E8%AE%A1%E5%92%8C%E7%9B%B8%E5%81%8F%E4%BC%B0%E8%AE%A1"><span class="toc-number">3.4.</span> <span class="toc-text">频偏估计和相偏估计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E5%81%8F%E7%BA%A0%E6%AD%A3"><span class="toc-number">3.4.1.</span> <span class="toc-text">频偏纠正</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%81%8F%E7%BA%A0%E6%AD%A3"><span class="toc-number">3.4.2.</span> <span class="toc-text">相偏纠正</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-number">3.5.</span> <span class="toc-text">仿真结果分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A7%E5%90%8C%E6%AD%A5%E4%B8%8E%E9%A2%91%E5%81%8F%E7%9B%B8%E5%81%8F%E6%A0%A1%E6%AD%A3%E4%B9%8B%E5%90%8E%E7%9A%84%E7%9C%BC%E5%9B%BE%E5%92%8C%E6%98%9F%E5%BA%A7%E5%9B%BE%E5%88%86%E6%9E%90"><span class="toc-number">3.5.1.</span> <span class="toc-text">帧同步与频偏相偏校正之后的眼图和星座图分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E5%81%8F%E7%9A%84%E5%AD%98%E5%9C%A8%EF%BC%8C%E5%B0%86%E5%BD%B1%E5%93%8D%E5%9F%BA%E4%BA%8E%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B8%A7%E6%A3%80%E6%B5%8B%E7%9A%84%E6%80%A7%E8%83%BD%EF%BC%8C%E8%AF%95%E5%88%86%E6%9E%90"><span class="toc-number">3.5.2.</span> <span class="toc-text">频偏的存在，将影响基于相关的帧检测的性能，试分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%87%E8%A1%A1"><span class="toc-number">4.</span> <span class="toc-text">均衡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AB%A0%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99-3"><span class="toc-number">4.1.</span> <span class="toc-text">本章参考资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%87%E8%A1%A1%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.2.</span> <span class="toc-text">均衡介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E8%A1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.2.1.</span> <span class="toc-text">均衡的方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%87%E8%A1%A1%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C"><span class="toc-number">4.3.</span> <span class="toc-text">均衡仿真结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80"><span class="toc-number">5.</span> <span class="toc-text">无线通信基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AB%A0%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99-4"><span class="toc-number">5.1.</span> <span class="toc-text">本章参考资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E8%A1%B0%E8%90%BD%E4%BF%A1%E9%81%93"><span class="toc-number">5.2.</span> <span class="toc-text">移动衰落信道</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E6%8D%9F%E8%80%97"><span class="toc-number">5.2.1.</span> <span class="toc-text">路径损耗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%A7%E5%B0%BA%E5%BA%A6%E8%A1%B0%E8%90%BD"><span class="toc-number">5.2.2.</span> <span class="toc-text">大尺度衰落</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E5%B0%BA%E5%BA%A6%E8%A1%B0%E8%90%BD"><span class="toc-number">5.2.3.</span> <span class="toc-text">小尺度衰落</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E5%BE%84%E6%95%88%E5%BA%94"><span class="toc-number">5.2.3.1.</span> <span class="toc-text">多径效应</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B9%B3%E5%9D%A6%E8%A1%B0%E8%90%BD"><span class="toc-number">5.2.3.2.</span> <span class="toc-text">平坦衰落</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A2%91%E7%8E%87%E9%80%89%E6%8B%A9%E6%80%A7%E8%A1%B0%E8%90%BD"><span class="toc-number">5.2.3.3.</span> <span class="toc-text">频率选择性衰落</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94"><span class="toc-number">5.2.3.4.</span> <span class="toc-text">多普勒效应</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%9B%B8%E5%B9%B2%E6%97%B6%E9%97%B4"><span class="toc-number">5.2.3.5.</span> <span class="toc-text">相干时间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BF%AB%E8%A1%B0%E8%90%BD"><span class="toc-number">5.2.3.6.</span> <span class="toc-text">快衰落</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%85%A2%E8%A1%B0%E8%90%BD"><span class="toc-number">5.2.3.7.</span> <span class="toc-text">慢衰落</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </div>
         </div>
@@ -219,7 +733,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
