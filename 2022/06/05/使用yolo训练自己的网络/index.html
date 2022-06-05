@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test2.png">
 <meta property="og:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test3.png">
 <meta property="article:published_time" content="2022-06-05T13:05:15.000Z">
-<meta property="article:modified_time" content="2022-06-05T14:24:07.299Z">
+<meta property="article:modified_time" content="2022-06-05T14:43:20.430Z">
 <meta property="article:author" content="Oldsilly">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/cmake1.png">
@@ -282,7 +282,7 @@
 </li>
 <li>
 <p>教程里将label和image都放入obj文件夹中，执行训练命令，可能会出现<code>Can‘t open label file(This can be normal only if you use MSCOCO)</code>的报错。</p>
-<p>解决方法：在确保train.txt和valid.txt都指向无误后，重新更新一下obj内的所有文件，即重新复制再粘贴。笔者复制了其他人的数据集后发现报错消失，非常神奇。</p>
+<p>解决方法：在确保train.txt和valid.txt都指向无误后，重新确认一下是不是所有图片都有对应的label（特别是报错的那几个图片），笔者因为标注时漏了两张而出现该错误。</p>
 </li>
 <li>
 <p>若出现<code>Error:Opencv ... in load_data_detection()</code>，则说明是train.txt和valid.txt中的路径错误，很可能是最后一个<code>\</code>没有打（文件夹到文件那一层）。</p>
