@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test2.png">
 <meta property="og:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test3.png">
 <meta property="article:published_time" content="2022-06-05T13:05:15.000Z">
-<meta property="article:modified_time" content="2022-06-05T14:43:20.430Z">
+<meta property="article:modified_time" content="2022-06-05T15:35:55.360Z">
 <meta property="article:author" content="Oldsilly">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/cmake1.png">
@@ -297,7 +297,7 @@
 <p>当loss几乎不再下降，mAP基本不变，recall接近1时，即可退出训练。</p>
 </li>
 <li>
-<p>测试网络时的命令是：<code>darknet.exe detector test data/obj.data yolo-obj.cfg \backup\last.weights</code>，可以添加参数：阈值，从而改变测试效果，即<code>darknet.exe detector test data/obj.data yolo-obj.cfg \backup\last.weights -thresh 0.5</code>。</p>
+<p>测试网络时的命令是：<code>darknet.exe detector test data/obj.data yolo-obj.cfg backup\last.weights</code>，可以添加参数：阈值，从而改变测试效果，即<code>darknet.exe detector test data/obj.data yolo-obj.cfg backup\last.weights -thresh 0.5</code>。</p>
 </li>
 <li>
 <p><code>x64\data </code>下的labels文件夹不要改动，它是存放字符图片的，和我们数据集中的label不是一回事。如果删掉了，那么你的yolo将不会有文字标识物品的类别。</p>
