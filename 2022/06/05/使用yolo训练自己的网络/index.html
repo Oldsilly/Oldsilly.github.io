@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://oldsilly.github.io">
-  <title>文章分类 | Oldsilly&#39;s secrets</title>
+  <title>在Windows上使用yolo训练自己的网络 | Oldsilly&#39;s secrets</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="https://oldsilly.github.io/categories/index.html">
+  <meta name="description" content="由于项目原因，需要自己用yolo网络训练自己的网络，适逢端午，遂欲出一期简单的教学。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Windows上使用yolo训练自己的网络">
+<meta property="og:url" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/index.html">
 <meta property="og:site_name" content="Oldsilly&#39;s secrets">
+<meta property="og:description" content="由于项目原因，需要自己用yolo网络训练自己的网络，适逢端午，遂欲出一期简单的教学。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-05T04:36:49.000Z">
-<meta property="article:modified_time" content="2022-05-02T05:04:35.124Z">
+<meta property="og:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/cmake1.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test2.png">
+<meta property="og:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test3.png">
+<meta property="article:published_time" content="2022-06-05T13:05:15.000Z">
+<meta property="article:modified_time" content="2022-06-05T14:24:07.299Z">
 <meta property="article:author" content="Oldsilly">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/cmake1.png">
   
     <link rel="alternative" href="/atom.xml" title="Oldsilly&#39;s secrets" type="application/atom+xml">
   
@@ -166,20 +172,318 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article class="article article-type-post show">
-  <header class="article-header" style="border-bottom: 1px solid #ccc">
-  <h1 class="article-title" itemprop="name">
-    文章分类
-  </h1>
-  </header>
+            <article id="post-使用yolo训练自己的网络" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      在Windows上使用yolo训练自己的网络
+    </h1>
+  
+
 
   
-  <div class="category-all-page">
-    <h2>共计&nbsp;4&nbsp;个分类</h2>
-    <ul class="category-list-item-list"><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="category-list-item-list-count">1</span></li><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-item-list-count">2</span></li><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E7%AB%A5%E7%8C%AA%E7%9A%84%E6%97%A5%E5%B8%B8/">童猪的日常</a><span class="category-list-item-list-count">1</span></li><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E9%80%9A%E4%BF%A1/">通信</a><span class="category-list-item-list-count">1</span></li></ul>
-  </div>
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/" class="archive-article-date">
+        <time datetime="2022-06-05T13:05:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-05</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.4k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">5分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>由于项目原因，需要自己用yolo网络训练自己的网络，适逢端午，遂欲出一期简单的教学。</p>
+<span id="more"></span>
+<h2 id="重要的资源和说明">重要的资源和说明</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/AlexeyAB/darknet">Yolo v4, v3 and v2 for Windows and Linux</a></p>
+<p>本教程基于AlexeyAB的darknet方案进行，该教程叙述详尽，只要跟着该教程走应该都能做出来。本文仅列举一些比较常见的错误。</p>
+<p>建议教程就使用上述链接，其余链接版本过旧，不保证成功。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HZ4y1s7YF">windows搭建darknet并运行yolov4</a></p>
+<p>配置环境是非常繁琐的，可以看这个视频作为参考。</p>
+<h2 id="开始">开始</h2>
+<h4 id="一、自制数据集">一、自制数据集</h4>
+<p>笔者使用 <strong>LabelImg</strong> 软件进行配置。</p>
+<p>使用方法/技巧：</p>
+<ul>
+<li>首先打开data下的predefined_classes.txt，并往里面写入你需要分的类别</li>
+<li>Open Dir 打开需要标记的图片路径</li>
+<li>Change Save Dir 打开 label.txt 的存放路径（label.txt 就是标记数据，包括种类和位置）</li>
+<li>按w开始画框，选择Advanced Mode可以不用按w就能画框，更加快速</li>
+<li>标记时可以重叠，哪怕完全包含也可以。（比如标记汽车时也把车旁的人也标记进去了，这没关系）</li>
+<li>记得<code>Change save format</code>，默认是<code>PascalVOC</code>，要改成<code>YOLO</code></li>
+<li>如果不能打开该软件，考虑直接在下载目录处解压使用，不要解压后再复制到其他地方使用。</li>
+</ul>
+<h4 id="2、配置环境">2、配置环境</h4>
+<p>配置环境根据视频和GitHub教程进行。</p>
+<p>教程章节：<a target="_blank" rel="noopener" href="https://github.com/AlexeyAB/darknet#requirements-for-windows-linux-and-macos">Requirements for Windows, Linux and macOS</a></p>
+<p>注意点：</p>
+<ul>
+<li>安装CUDA需要和本机显卡匹配，笔者自定义安装CUDA结束后，安装的文件夹被删除，推测原因是：安装的目标路径和一开始给定的缓存路径是同一路径。但是笔者没有去验证这种可能性，用了标准安装方法，也能正常运行。</li>
+<li>安装CUDNN需要和CUDA匹配，CUDNN下载需要注册，得自己找资源</li>
+<li>安装Opencv，具体版本根据GitHub要求</li>
+<li>据说要先安装visual studio，再安装CUDNN才不会出错</li>
+</ul>
+<h4 id="3、通过CMake编译">3、通过CMake编译</h4>
+<p>这一步会得到我们后面要使用的 <code>darknet.exe</code>。照着视频和Github教程来即可。</p>
+<p>教程章节：<a target="_blank" rel="noopener" href="https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake">How to compile on Windows (using <code>CMake</code>)</a></p>
+<p>注意点：</p>
+<ul>
+<li>
+<p>使用CMake编译时，容易报错：<code>opencv ... has no binaries compatible with your configuration</code></p>
+<p>解决方法：<strong>在CMake的路径中</strong>把OpenCV_DIR修改为<code>build/x64/vc15/lib</code>，环境变量那里也改成这个</p>
+</li>
+</ul>
+<div align="center">
+    <img src="/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/cmake1.png">
+</div>
+<ul>
+<li>在Visual Studio里生成解决方案（build）时，因为代码给的工程使用的CUDA一般而言和我们电脑支持的CUDA版本不一样，因此还需要对工程的有关部份进行修改，详情看视频</li>
+</ul>
+<h4 id="4、训练">4、训练</h4>
+<p>这一步比较简单，看着GitHub教程即可。</p>
+<p>教程章节：<a target="_blank" rel="noopener" href="https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects">How to train (to detect your custom objects)</a></p>
+<p>注意点：</p>
+<ul>
+<li>
+<p>需要自己进行修改的（教程没说，但是要根据自己网络调参）：anchor、learning rate等超参数</p>
+</li>
+<li>
+<p>教程里将label和image都放入obj文件夹中，执行训练命令，可能会出现<code>Can‘t open label file(This can be normal only if you use MSCOCO)</code>的报错。</p>
+<p>解决方法：在确保train.txt和valid.txt都指向无误后，重新更新一下obj内的所有文件，即重新复制再粘贴。笔者复制了其他人的数据集后发现报错消失，非常神奇。</p>
+</li>
+<li>
+<p>若出现<code>Error:Opencv ... in load_data_detection()</code>，则说明是train.txt和valid.txt中的路径错误，很可能是最后一个<code>\</code>没有打（文件夹到文件那一层）。</p>
+</li>
+<li>
+<p>若添加验证集（即有不同于train.txt的valid.txt），则验证集的选取要均匀，因为我们的数据集一般都是相邻好几个图片所拍摄的内容相近，因此如果验证集不连续，则训练和验证效果都不好（相当于没学的要考，学了的没考）。</p>
+</li>
+<li>
+<p>教程中训练的命令为：<code>darknet.exe detector train data/obj.data yolo-obj.cfg yolov4.conv.137 -map</code>，其中map是同时画出mAP的图像，如果要训练自己的网络，则不需要添加权重文件（即所示命令中的<code>yolov4.conv.137</code>），因为网络结构可能是不一样的，别人训练好的参数虽然可能可以加快你的网络收敛，但是网络都不一样也法用啊。</p>
+</li>
+<li>
+<p>当loss几乎不再下降，mAP基本不变，recall接近1时，即可退出训练。</p>
+</li>
+<li>
+<p>测试网络时的命令是：<code>darknet.exe detector test data/obj.data yolo-obj.cfg \backup\last.weights</code>，可以添加参数：阈值，从而改变测试效果，即<code>darknet.exe detector test data/obj.data yolo-obj.cfg \backup\last.weights -thresh 0.5</code>。</p>
+</li>
+<li>
+<p><code>x64\data </code>下的labels文件夹不要改动，它是存放字符图片的，和我们数据集中的label不是一回事。如果删掉了，那么你的yolo将不会有文字标识物品的类别。</p>
+</li>
+</ul>
+<p>笔者认为本章最难的地方在于路径的修改和匹配，网上还有很多配置数据集路径的方法，比如将图片和标签存到VOC2022下的JPEGImage和labels等文件夹。这些方法笔者没测试过，不过笔者能肯定，按照教程的方法是可以完成的，只要把常见的错误<code>Can‘t open label file(This can be normal only if you use MSCOCO)</code>解决就好。</p>
+<p>另外，教程中的技术上的细节这里并没有展开，那些细节能够帮助你更快的理解网络。</p>
+<h4 id="5、测试效果">5、测试效果</h4>
+<p>这里就放几张图好了，嘻嘻。</p>
+<div align="center">
+    <img src="/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test2.png">
+</div>
+<div align="center">
+    <img src="/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/test3.png">
+</div>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>今晚加餐！<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Oldsilly
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://oldsilly.github.io/2022/06/05/使用yolo训练自己的网络/" title="在Windows上使用yolo训练自己的网络" target="_blank">https://oldsilly.github.io/2022/06/05/使用yolo训练自己的网络/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/人工智能//" class="article-tag-list-link color5">人工智能</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://oldsilly.github.io/2022/06/05/%E4%BD%BF%E7%94%A8yolo%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%BB%9C/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/05/02/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92%E5%92%8C%E6%97%A5%E5%BF%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">更新计划和日志</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </div>
         </div>
@@ -219,7 +523,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
