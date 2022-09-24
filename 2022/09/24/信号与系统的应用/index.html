@@ -6,17 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://oldsilly.github.io">
-  <title>Archives: 2022/5 | Oldsilly&#39;s secrets</title>
+  <title>【通信】信号与系统(含数字信号处理)在通信中的应用 | Oldsilly&#39;s secrets</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Oldsilly&#39;s secrets">
-<meta property="og:url" content="https://oldsilly.github.io/archives/2022/05/index.html">
+  <meta name="description" content="笔者在复习信号与系统的时候，拜读了乐正友老师的《信号与系统例题分析》，再结合自己大学四年来的课程领悟，总结出了一些比较有趣的关联性紧密的知识点。 1、带通滤波器的两种理想型 考虑如下框图和幅频响应：        考虑如下相频响应：        由题目条件可知： $$ P(jw)&#x3D;\frac{\pi}{2}\sum\delta(w-\frac{n\pi}{2});  \ X_s(jw)&#x3D;\fra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【通信】信号与系统(含数字信号处理)在通信中的应用">
+<meta property="og:url" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="Oldsilly&#39;s secrets">
+<meta property="og:description" content="笔者在复习信号与系统的时候，拜读了乐正友老师的《信号与系统例题分析》，再结合自己大学四年来的课程领悟，总结出了一些比较有趣的关联性紧密的知识点。 1、带通滤波器的两种理想型 考虑如下框图和幅频响应：        考虑如下相频响应：        由题目条件可知： $$ P(jw)&#x3D;\frac{\pi}{2}\sum\delta(w-\frac{n\pi}{2});  \ X_s(jw)&#x3D;\fra">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/1_1.jpg">
+<meta property="og:image" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/1_2.jpg">
+<meta property="og:image" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/2_1.jpg">
+<meta property="og:image" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/2_2.jpg">
+<meta property="og:image" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/2_3.jpg">
+<meta property="og:image" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/3_0.jpg">
+<meta property="article:published_time" content="2022-09-24T01:09:42.000Z">
+<meta property="article:modified_time" content="2022-09-24T03:38:39.313Z">
 <meta property="article:author" content="Oldsilly">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/1_1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Oldsilly&#39;s secrets" type="application/atom+xml">
   
@@ -164,85 +175,189 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-信号与系统的应用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/05/02/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92%E5%92%8C%E6%97%A5%E5%BF%97/" class="archive-article-date">
-        <time datetime="2022-05-02T12:46:28.165Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/05/02/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92%E5%92%8C%E6%97%A5%E5%BF%97/">更新计划和日志</a>
-	
+    <h1 class="article-title" itemprop="name">
+      【通信】信号与系统(含数字信号处理)在通信中的应用
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/" class="archive-article-date">
+        <time datetime="2022-09-24T01:09:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.4k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">8分</span>
+    </span>
+  </span>
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>笔者在复习信号与系统的时候，拜读了乐正友老师的《信号与系统例题分析》，再结合自己大学四年来的课程领悟，总结出了一些比较有趣的关联性紧密的知识点。</p>
+<h4 id="1、带通滤波器的两种理想型">1、带通滤波器的两种理想型</h4>
+<p>考虑如下框图和幅频响应：</p>
+<div align="center">
+    <img src="/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/1_1.jpg">
+</div>
+<p>考虑如下相频响应：</p>
+<div align="center">
+    <img src="/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/1_2.jpg">
+</div>
+<p>由题目条件可知：<br>
+$$<br>
+P(jw)=\frac{\pi}{2}\sum\delta(w-\frac{n\pi}{2});  \<br>
+X_s(jw)=\frac{1}{2\pi}X(jw)*P(jw)=\frac{1}{4}\sum X(w-\frac{n\pi}{2})<br>
+$$<br>
+因此，抽样信号中仅有n=4和n=-4的频谱。</p>
+<p><strong>(1) 相位1</strong></p>
+<p>相位1是严格的线性相位，因此我们可以猜想，当信号通过带通滤波器后，对于不同的频率分量，滤波器对他们的相位响应是附加上<strong>对应的</strong>相位。滤波后的信号，<strong>波形和包络都不失真</strong>。<br>
+$$<br>
+Y_1(jw)=\frac{1}{4}X(w+2\pi)e^{-jw/2}+\frac{1}{4}X(w-2\pi)e^{-jw/2}<br>
+$$<br>
+根据傅里叶变换的性质可得：<br>
+$$<br>
+y_1(t)=-\frac{1}{2}x(t-\frac{1}{2})cos(2\pi t)=\frac{1}{2}x(t-\frac{1}{2})cos[2\pi(t-\frac{1}{2})]<br>
+$$<br>
+<strong>(2) 相位2</strong></p>
+<p>相位2是分段线性的，因此我们可以猜想，滤波后的信号，<strong>波形失真，包络无失真</strong>。<br>
+$$<br>
+Y_1(jw)=\frac{1}{4}X(w+2\pi)e^{-j(w+2\pi)/2}+\frac{1}{4}X(w-2\pi)e^{-j(w-2\pi)/2}<br>
+$$<br>
+根据傅里叶变换的性质可得：<br>
+$$<br>
+y_1(t)=\frac{1}{2}x(t-\frac{1}{2})cos(2\pi t)<br>
+$$<br>
+<strong>(3) 相位3</strong></p>
+<p>该情况不再做探讨。</p>
+<p><strong>(4)结论</strong></p>
+<p>严格线性相位会对载波和调制信号同时做相移，此时波形无失真，自然包络也无失真。</p>
+<p>分段线性相位对于载波而言没有相移，因此包络不变，但此时调制信号相移导致波形失真。</p>
+<p>上述两种相位在采用包络检波法时都是理想的。</p>
+<h4 id="2、单边带调制SSB的实现">2、单边带调制SSB的实现</h4>
+<p>SSB单边带调制的原理框图如下。</p>
+<div align="center">
+    <img src="/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/2_1.jpg">
+</div>
+<p>上路的余弦信号实现频谱搬移，下路一个希尔伯特变换器实现±j的相位，再乘一个正弦信号又实现j的相位。因此下路最终结果是一边频率实现同相一边频率实现反相。</p>
+<p>中间信号频谱如下：</p>
+<div align="center">
+    <img src="/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/2_2.jpg">
+</div>
+<p>值得注意的是：<br>
+$$<br>
+X_1(jw)=-jsgn(w)X(jw)<br>
+$$</p>
+<p>$$<br>
+X_3(jw)=\frac{j}{2}(X_1(w+w_0)+X_1(w-w_0))=\frac{1}{2}(sgn(w-w_0)X(w+w_0)+sgn(w+w_0)X(w-w_0))<br>
+$$<br>
+输出信号频谱如下：</p>
+<div align="center">
+    <img src="/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/2_3.jpg">
+</div>
+<h4 id="3、OFDM模型介绍">3、OFDM模型介绍</h4>
+<p>对于无线传输信道，多径效应是信道引起传输信号失真的重要原因之一。而消除多径效应的常见方法有<strong>均衡和多载波调制（MCM）技术</strong>。</p>
+<p><strong>均衡：实质是努力寻找与信道模型相应的逆系统，试图使信道与均衡器组合能提供逼近理想传输特性的系统模型。也可以认为是期望利用均衡器来抵消信道非理想特性引入的失真。</strong></p>
+<p><strong>多载波调制（MCM）技术：MCM利用一组（N个）子载波在信道中并行传输信号，它将待传送的高速数据流分解成一组并行传输的低速数据流。每个子载波传送的数据率只是原有单载波系统的1/N，也即每个子载波承载的码元周期是原单载波系统码元周期的N倍，这就使得每个子载波传输码元的周期可以远大于信道的时延扩展，从而具有很强的抗码间干扰能力。</strong></p>
+<p>很早以前，人们就已经认识并利用多载波技术，但存在许多矛盾未能很好解决。传统的多载波传输构成原理与频分复用类似。高速码流经串并转换构成N个低速码流之后，分别对N个子载波进行调制。各子载波信号占据互不交叠的频率范围。这种系统需要大量的带通滤波器和调制解调器，这使系统的复杂度和成本大大提高，鲁棒性也较差。同时，为了降低邻近载波信号之间的相互干扰，各子载波之间必须留出足够裕量的保护频带，因而使系统的频谱利用率大大降低。</p>
+<p><strong>OFDM：要求各子载波相互正交。在接收端用正交运算（匹配滤波）技术将频谱相互重叠的子载波信号逐个分离。正交运算大致为：与发射机对应的子载波与接收信号做相乘后积分（信号内积），再进行后续信号分离。</strong></p>
+<p>从本质上将，OFDM技术是将在时域上相距很窄、频域占据很宽的比特流变换成频域上相距很窄、时域占据很宽的比特流。因此，<strong>对于脉冲噪声这种时宽很窄的干扰信号对OFDM比特流的影响就相对被削弱了。</strong></p>
+<p>下图为OFDM实现的硬件框图：</p>
+<div align="center">
+    <img src="/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/3_0.jpg">
+</div>
+<p>可见，硬件实现结构复杂。</p>
+<h4 id="4、OFDM模型的DFT-FFT-改进">4、OFDM模型的DFT(FFT)改进</h4>
+<p>考虑使用QPSK数字调制子载波的方式讨论DFT实现OFDM的原理。</p>
+<p>每路的已调信号（该路子载波频率为w0）可写作：<br>
+$$<br>
+d(t)=acos(w_0t)+bsin(w_0t), a=\pm1,b=\pm1<br>
+$$<br>
+则N路子载波合成的OFDM信号表达式为：<br>
+$$<br>
+x(t)=\sum [a_ncos(w_nt)+b_nsin(w_nt)], a_n=\pm1,b_n=\pm1<br>
+$$<br>
+下面对x(t)进行时域抽样，间隔时间为T=Ts/N，则抽样时刻t=kT，则：<br>
+$$<br>
+x(k)=\sum [a_ncos(w_nt)+b_nsin(w_nt)]=Re(\sum (a_n-b_nj)(cos(w_nt_k)+jsin(w_nt_k))<br>
+$$</p>
+<p>$$<br>
+=Re(sum (a_n-b_nj)e^{jw_s(\frac{kT_s}{N})})=Re(\sum (a_n-b_nj)e^{j(\frac{2\pi}{N})kn})=Re(IDFT[D(n)])<br>
+$$</p>
+<p>其中D(n)=an-jbn，它是QPSK调制信号的复数共轭表示，完全由基带信号决定，或者说它携带了基带信息。</p>
+<p>很明显，从以上推导可以看出，在发射端我们只要对D(n)进行IDFT运算即可产生OFDM信号。其功能完全可以取代大量振荡器与调制器构成之硬件系统。可以证明，在接收端对此信号进行DFT运算即可恢复D(n)，从而获得原始之基带信息。为达此目的，需要对 DFT取2N点抽样，抽样间隔为T/2N。可见,这一方法使接收系统也大大简化。以上分析为OFDM系统的数字化提供了理论依据。传统观念中各子载波分别需要许多模拟前端的方式可以由一个共同的 DFT运算所代替，从而极大地降低了系统的复杂度。随着超大规模集成(VLSI)系统技术的发展,出现了价格低廉、结构简单的FFT专用集成电路芯片以及通用数字信号处理器(DSP)芯片,这就使OFDM系统的付诸应用成为现实。</p>
+<h4 id="5、数字滤波器的结构特点">5、数字滤波器的结构特点</h4>
+<p>直接1型：先实现系统零点再实现系统极点。</p>
+<p>直接2型：先实现系统极点再实现系统零点。</p>
+<ul>
+<li>优点：延时单元个数等于差分方程阶数，是<strong>延时单元最少的实现</strong>，有时候也称为典范结构实现。</li>
+<li>缺点：在阶数比较高的情况下，要求系数精度高，调整特性不方便，每一系数的变化都将影响零极点的分布。</li>
+</ul>
+<p>级联型：H=H1H2…Hn</p>
+<ul>
+<li>优点：最少延时单元实现；每个二阶或者一阶子系统单独控制零极点，因而便于调整，同时在系数量化时对系统的性能影响小。子系统的前后次序对有限字长引起的量化效应时有影响的，需要仔细定夺。</li>
+<li>缺点：尽管是最少延时单元实现，乘法次数明显比直接型多。</li>
+</ul>
+<p>并联型：H=H1+H2+…+Hn</p>
+<ul>
+<li>优点：对输入信号并行滤波，运行速度快；没有前后级误差累积，有限子长效应引起的量化效应小；部分分式展开后，极点可以单独调整。</li>
+<li>缺点：零点无法单独调整，当需要准确控制滤波零点时就不能采用并联型结构。</li>
+</ul>
+<h4 id="6、匹配滤波器">6、匹配滤波器</h4>
+<p>引入：在通信系统的接收部分中，为了保证信息传输的准确性，需要设计一种“最佳检测器”，能够使有用信号增强，同时抑制噪声，保证在判别信号出现时具有最低的错误概率。</p>
+<p><strong>匹配滤波器：能够以最低的错误概率判决信号脉冲的有无的滤波器称为匹配滤波器。匹配指的是滤波器的特性和信号的特性取得某种一致，使得滤波器输出端得信号瞬时功率与噪声平均功率之比最大（信噪比最大）。</strong></p>
+<p><strong>结论：</strong></p>
+<ul>
+<li>匹配滤波器的冲激响应是所需信号s(t)对垂直轴(所谓y轴)镜像并向右平移T，这样的线性系统称为匹配滤波器，<strong>匹配滤波器是线性系统的最佳滤波器</strong>。</li>
+<li>匹配滤波器的功能相当于对s(t)做自相关运算，在t=T时刻取得自相关函数得峰值，峰值大小等于信号s(t)的能量E，而与波形无关。</li>
+<li>所谓”最佳“仅限于线性系统。</li>
+</ul>
+
+    
+
+    
+
+    
+
   </div>
-</article>
-  
+  <div class="article-info article-info-index">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2022-05-02T06:00:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/05/02/%E9%80%9A%E4%BF%A1__%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/">【通信】通信原理实验笔记</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -255,60 +370,118 @@
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://oldsilly.github.io/2022/09/24/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/05/02/%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%BC%A0/" class="archive-article-date">
-        <time datetime="2022-05-02T05:10:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-02</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/06/20/220620%E9%9A%8F%E7%AC%94/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">22.06.20  平凡的一天</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/05/02/%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%BC%A0/">博客新开张</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%B8%A6%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E4%B8%A4%E7%A7%8D%E7%90%86%E6%83%B3%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">1、带通滤波器的两种理想型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%8D%95%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6SSB%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">2、单边带调制SSB的实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81OFDM%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">3、OFDM模型介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81OFDM%E6%A8%A1%E5%9E%8B%E7%9A%84DFT-FFT-%E6%94%B9%E8%BF%9B"><span class="toc-number">4.</span> <span class="toc-text">4、OFDM模型的DFT(FFT)改进</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text">5、数字滤波器的结构特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E5%8C%B9%E9%85%8D%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">6、匹配滤波器</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -349,8 +522,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
