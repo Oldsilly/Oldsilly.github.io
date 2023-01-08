@@ -6,36 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://oldsilly.github.io">
-  <title>【计网】第二章_物理层 | Oldsilly&#39;s secrets</title>
+  <title>Category: 数字信号处理 | Oldsilly&#39;s secrets</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="自学计算机网络，资料来自网络。 原文出处：https:&#x2F;&#x2F;www.jianshu.com&#x2F;c&#x2F;f627e74e6ff3 做了一些内容删除，适合非计算机专业的入门学习。 本章内容多为通信原理、信号与系统、信息论、电磁场与电磁波等，皆为电子信息的专业课，故不再过多涉及。本文仅讨论一些与先修课程有所区别和深入的地方。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【计网】第二章_物理层">
-<meta property="og:url" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Oldsilly&#39;s secrets">
+<meta property="og:url" content="https://oldsilly.github.io/categories/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="Oldsilly&#39;s secrets">
-<meta property="og:description" content="自学计算机网络，资料来自网络。 原文出处：https:&#x2F;&#x2F;www.jianshu.com&#x2F;c&#x2F;f627e74e6ff3 做了一些内容删除，适合非计算机专业的入门学习。 本章内容多为通信原理、信号与系统、信息论、电磁场与电磁波等，皆为电子信息的专业课，故不再过多涉及。本文仅讨论一些与先修课程有所区别和深入的地方。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/1.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/2.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/3.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/4.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/5.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/6.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/7.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/8.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/9.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/10.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/11.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/12.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/13.png">
-<meta property="og:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/14.png">
-<meta property="article:published_time" content="2022-12-26T04:41:37.000Z">
-<meta property="article:modified_time" content="2022-12-27T05:12:40.725Z">
 <meta property="article:author" content="Oldsilly">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Oldsilly&#39;s secrets" type="application/atom+xml">
   
@@ -183,368 +164,65 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-【计网】第二章-物理层" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2023/01/07/%E3%80%90DSP%E3%80%91DSP%E5%99%A8%E4%BB%B6%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/" class="archive-article-date">
+        <time datetime="2023-01-07T03:17:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-07</time>
+</a>
+
+        </div>
+    	 
   
-  
-    <h1 class="article-title" itemprop="name">
-      【计网】第二章_物理层
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2023/01/07/%E3%80%90DSP%E3%80%91DSP%E5%99%A8%E4%BB%B6%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/">【DSP】DSP器件原理与应用</a>
+	
     </h1>
   
 
 
-  
-  
-        
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-
-<a href="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/" class="archive-article-date">
-        <time datetime="2022-12-26T04:41:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-26</time>
-</a>
-
-  
-  
-    
-<div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <!-- fonts.scss -->
-      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
-      <i class="icon-statistics"></i>
-      <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.3k字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="icon-book icon"></i>
-      <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
-    </span>
-  </span>
-</div>
-
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>自学计算机网络，资料来自网络。</p>
-<p>原文出处：<a target="_blank" rel="noopener" href="https://www.jianshu.com/c/f627e74e6ff3">https://www.jianshu.com/c/f627e74e6ff3</a></p>
-<p>做了一些内容删除，适合非计算机专业的入门学习。</p>
-<p>本章内容多为通信原理、信号与系统、信息论、电磁场与电磁波等，皆为电子信息的专业课，故不再过多涉及。本文仅讨论一些与先修课程有所区别和深入的地方。</p>
-<span id="more"></span>
-<h3 id="单向通信（单工）、双向交替通信（半双工）和双向同时通信（全双工）">单向通信（单工）、双向交替通信（半双工）和双向同时通信（全双工）</h3>
-<h4 id="单工通信">单工通信</h4>
-<p>只能有一个方向的通信而没有反方向的交互。<strong>无线电广播</strong>或有线电以及电视广播就属于这种类型。</p>
-<h4 id="半双工通信">半双工通信</h4>
-<p>通信的双方可以发送信息，但不能双方同时发送（当然也就不能同时接收）。这种通信方式使一方发送另一方接收，过一段时间后可以再反过来。通信的双方都可以发送信息，但不能双方同时发送*(当然也就不能同时接收)*。举例：<strong>对讲机</strong>，按下按键占线，只能有一方说话。</p>
-<h4 id="全双工通信"><strong>全双工通信</strong></h4>
-<p>即通信的双发可以同时发送和接收信息。举例：<strong>电话</strong>。你可以同时听话和说话。</p>
-<h3 id="常用编码">常用编码</h3>
-<h4 id="不归零编码"><strong>不归零编码</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/1.png">
-</div>
-<blockquote>
-<ul>
-<li>
-<p>正电平表示比特1/0</p>
-</li>
-<li>
-<p>负电平表示比特0/1</p>
-</li>
-</ul>
-<p>中间的虚线是零电平，所谓不归零编码，就是指在整个码元时间内，电平不会出现零电平</p>
-<p><strong>实际比特1和比特0的表示要看现实怎么规定</strong></p>
-</blockquote>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/2.png">
-</div>
-<blockquote>
-<p>这需要发送方的发送与接收方的接收做到严格的同步</p>
-<ul>
-<li>
-<p>需要<strong>额外一根传输线来传输时钟信号</strong>，使发送方和接收方同步，接收方按时钟信号的节拍来逐个接收码元</p>
-</li>
-<li>
-<p><strong>但是</strong>对于计算机网络，<strong>宁愿利用这根传输线传输数据信号</strong>，而不是传输时钟信号</p>
-</li>
-</ul>
-<p>由于<strong>不归零编码</strong>存在<strong>同步问题</strong>，因此计算机网络中的数据传输不采用这类编码！</p>
-</blockquote>
-<h4 id="归零编码"><strong>归零编码</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/3.png">
-</div>
-<blockquote>
-<ul>
-<li>每个码元传输结束后信号都要“归零”，所以接收方只要在信号归零后进行采样即可，不需要单独的时钟信号。</li>
-<li>实际上，归零编码相当于把时钟信号用“归零”方式编码在了数据之内，这称为“自同步”信号。</li>
-<li>但是，归零编码中大部分的数据带宽，都用来传输“归零”而浪费掉了。</li>
-<li><strong>归零编码</strong>虽然<strong>自同步</strong>，但<strong>编码效率低</strong></li>
-</ul>
-</blockquote>
-<h4 id="曼彻斯特编码"><strong>曼彻斯特编码</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/4.png">
-</div>
-<blockquote>
-<p>在每个码元时间的中间时刻，信号都会发生跳变</p>
-<ul>
-<li>
-<p>负跳变表示比特1/0</p>
-</li>
-<li>
-<p>正跳变表示比特0/1</p>
-</li>
-<li>
-<p>码元中间时刻的跳变即表示时钟，又表示数据</p>
-</li>
-</ul>
-<p><strong>实际比特1和比特0的表示要看现实怎么规定</strong></p>
-<p>传统以太网使用的就是曼切斯特编码</p>
-</blockquote>
-<h4 id="差分曼彻斯特编码"><strong>差分曼彻斯特编码</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/5.png">
-</div>
-<blockquote>
-<p>在每个码元时间的中间时刻，信号都会发送跳变，但与<strong>曼彻斯特不同</strong></p>
-<ul>
-<li>
-<p><strong>跳变仅表示时钟</strong></p>
-</li>
-<li>
-<p><strong>码元开始处电平是否变换表示数据</strong></p>
-</li>
-<li>
-<p><strong>实际比特1和比特0的表示要看现实怎么规定</strong></p>
-</li>
-<li>
-<p>比曼彻斯特编码变化少，更适合较高的传输速率</p>
-</li>
-</ul>
-</blockquote>
-<h4 id="总结-4"><strong>总结</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/6.png">
-</div>
-<h3 id="信道复用技术">信道复用技术</h3>
-<p>复用 (multiplexing) 是通信技术中的基本概念。</p>
-<p>它允许用户使用一个共享信道进行通信，降低成本，提高利用率。</p>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/7.png">
-</div>
-<h4 id="频分复用-FDM-Frequency-Division-Multiplexing"><strong>频分复用 FDM (Frequency Division Multiplexing)</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/8.png">
-</div>
-<blockquote>
-<ul>
-<li>将整个带宽分为多份，用户在分配到一定的频带后，在通信过程中自始至终都占用这个频带。</li>
-<li><strong>频分复用</strong>的所有用户在同样的时间<strong>占用不同的带宽资源</strong>（请注意，这里的“带宽”是频率带宽而不是数据的发送速率）。</li>
-</ul>
-</blockquote>
-<h4 id="时分复用TDM-Time-Division-Multiplexing"><strong>时分复用TDM (Time Division Multiplexing)</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/9.png">
-</div>
-<blockquote>
-<ul>
-<li><strong>时分复用</strong>则是将时间划分为一段段等长的<strong>时分复用帧（TDM帧）</strong>。每一个时分复用的用户在每一个 TDM 帧中占用固定序号的时隙。</li>
-<li>每一个用户所占用的时隙是<strong>周期性地出现</strong>（其周期就是TDM帧的长度）的。</li>
-<li>TDM 信号也称为<strong>等时</strong> (isochronous) 信号。</li>
-<li><strong>时分复用的所有用户在不同的时间占用同样的频带宽度。</strong></li>
-</ul>
-</blockquote>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/10.png">
-</div>
-<blockquote>
-<ul>
-<li><strong>时分复用可能会造成线路资源的浪费</strong>
-<ul>
-<li>使用时分复用系统传送计算机数据时，由于计算机数据的突发性质，用户对分配到的子信道的利用率一般是不高的。</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h4 id="统计时分复用-STDM-Statistic-TDM"><strong>统计时分复用 STDM (Statistic TDM)</strong></h4>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/11.png">
-</div>
-<h4 id="波分复用-WDM-Wavelength-Division-Multiplexing">波分复用 WDM(Wavelength Division Multiplexing)</h4>
-<p>即光的频分复用。</p>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/12.png">
-</div>
-#### 码分复用 CDM (Code Division Multiplexing)
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/13.png">
-</div>
-<div align="center">
-    <img src="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/14.png">
-</div>
-<blockquote>
-<ul>
-<li>常用的名词是<strong>码分多址</strong> CDMA (Code Division Multiple Access)。</li>
-<li>各用户使用经过特殊挑选的不同码型（正交码），因此彼此不会造成干扰。</li>
-<li>这种系统发送的信号有<strong>很强的抗干扰能力</strong>，其频谱类似于白噪声，不易被敌人发现。</li>
-</ul>
-</blockquote>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
+        <div class="article-info info-on-right">
+          
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/计算机网络//" class="article-tag-list-link color1">计算机网络</a>
+        			<a href="/categories/数字信号处理//" class="article-tag-list-link color2">数字信号处理</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-    
-
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://oldsilly.github.io/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%89%A9%E7%90%86%E5%B1%82/" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
-  
-    <a href="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          【计网】第三章-数据链路层
-        
-      </div>
-    </a>
   
   
-    <a href="/2022/12/26/%E3%80%90%E8%AE%A1%E7%BD%91%E3%80%91%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">【计网】第一章_绪论</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%EF%BC%88%E5%8D%95%E5%B7%A5%EF%BC%89%E3%80%81%E5%8F%8C%E5%90%91%E4%BA%A4%E6%9B%BF%E9%80%9A%E4%BF%A1%EF%BC%88%E5%8D%8A%E5%8F%8C%E5%B7%A5%EF%BC%89%E5%92%8C%E5%8F%8C%E5%90%91%E5%90%8C%E6%97%B6%E9%80%9A%E4%BF%A1%EF%BC%88%E5%85%A8%E5%8F%8C%E5%B7%A5%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">单向通信（单工）、双向交替通信（半双工）和双向同时通信（全双工）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%B7%A5%E9%80%9A%E4%BF%A1"><span class="toc-number">1.1.</span> <span class="toc-text">单工通信</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%8A%E5%8F%8C%E5%B7%A5%E9%80%9A%E4%BF%A1"><span class="toc-number">1.2.</span> <span class="toc-text">半双工通信</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E5%8F%8C%E5%B7%A5%E9%80%9A%E4%BF%A1"><span class="toc-number">1.3.</span> <span class="toc-text">全双工通信</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%BC%96%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">常用编码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%BD%92%E9%9B%B6%E7%BC%96%E7%A0%81"><span class="toc-number">2.1.</span> <span class="toc-text">不归零编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%92%E9%9B%B6%E7%BC%96%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text">归零编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%BC%E5%BD%BB%E6%96%AF%E7%89%B9%E7%BC%96%E7%A0%81"><span class="toc-number">2.3.</span> <span class="toc-text">曼彻斯特编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E6%9B%BC%E5%BD%BB%E6%96%AF%E7%89%B9%E7%BC%96%E7%A0%81"><span class="toc-number">2.4.</span> <span class="toc-text">差分曼彻斯特编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-4"><span class="toc-number">2.5.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF"><span class="toc-number">3.</span> <span class="toc-text">信道复用技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8-FDM-Frequency-Division-Multiplexing"><span class="toc-number">3.1.</span> <span class="toc-text">频分复用 FDM (Frequency Division Multiplexing)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%88%86%E5%A4%8D%E7%94%A8TDM-Time-Division-Multiplexing"><span class="toc-number">3.2.</span> <span class="toc-text">时分复用TDM (Time Division Multiplexing)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E6%97%B6%E5%88%86%E5%A4%8D%E7%94%A8-STDM-Statistic-TDM"><span class="toc-number">3.3.</span> <span class="toc-text">统计时分复用 STDM (Statistic TDM)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A2%E5%88%86%E5%A4%8D%E7%94%A8-WDM-Wavelength-Division-Multiplexing"><span class="toc-number">3.4.</span> <span class="toc-text">波分复用 WDM(Wavelength Division Multiplexing)</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
           </div>
@@ -585,10 +263,10 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
