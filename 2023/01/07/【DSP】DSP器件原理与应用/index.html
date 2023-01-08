@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://oldsilly.github.io/2023/01/07/%E3%80%90DSP%E3%80%91DSP%E5%99%A8%E4%BB%B6%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/6.png">
 <meta property="og:image" content="https://oldsilly.github.io/2023/01/07/%E3%80%90DSP%E3%80%91DSP%E5%99%A8%E4%BB%B6%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/2.png">
 <meta property="article:published_time" content="2023-01-07T03:17:06.000Z">
-<meta property="article:modified_time" content="2023-01-08T09:35:10.627Z">
+<meta property="article:modified_time" content="2023-01-08T09:57:09.210Z">
 <meta property="article:author" content="Oldsilly">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://oldsilly.github.io/2023/01/07/%E3%80%90DSP%E3%80%91DSP%E5%99%A8%E4%BB%B6%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/7.png">
@@ -683,7 +683,10 @@ MEM模块进行内存分配时使用的基本单位是MADU。对C6000系列芯�
 <li>PG:程序地址生成（ program address generate)，确定取指包的地址。</li>
 <li>PS:程序地址发送（ program address send)，将取指包的地址发送到内存。</li>
 <li>PW:程序访问等待( program access reday wait)，访问程序存储空间。</li>
-<li>PR:程序取指包接收（program fetch packet receive)，取指包送至CPU。流水线译码级的2个节拍如下:</li>
+<li>PR:程序取指包接收（program fetch packet receive)，取指包送至CPU。</li>
+</ul>
+<p>流水线译码级的2个节拍如下:</p>
+<ul>
 <li>DP:指令分配（ instruction dispatch)，确定该取指包的后续执行包，并将执行包送到合适的功能单元。</li>
 <li>DC:指令译码( instruction decode)，指令在功能单元中译码。</li>
 </ul>
